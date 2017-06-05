@@ -1,12 +1,12 @@
-010 print "{clear}"
+010 gosub 500
 020 v=53248 : rem VIC
 030 poke v+21,4 : rem Enable sprite 2
 035 poke v+41,7 : rem Sprite color = yellow
 040 poke 2042,13 : rem Sprite 2 data from block 13
-050 for n=0 to 62
+050 for i=0 to 62
 060   read q
-070   poke 832+n,q
-080 next n
+070   poke 832+i,q
+080 next i
 085 x = 25
 090 y = 50
 093 xd = 2
