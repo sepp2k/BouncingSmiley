@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    working_directory: /repo
+    docker:
+      - image: sepp2k/c64-tools
+    steps:
+      - checkout
+      - run: make release
