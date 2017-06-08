@@ -1,8 +1,10 @@
+003 poke 53280, 6 : rem outer border = dark blue
+006 poke 53281, 0 : rem background = black
 010 gosub 500
 020 v=53248 : rem VIC
 030 poke v+21,12 : rem Enable sprite 2 and 3
-035 poke v+41,7 : rem Smiley color = yellow
-037 poke v+42,0 : rem Frowney color = black
+035 poke v+41,7  : rem Smiley color = yellow
+037 poke v+42,15 : rem Frowney color = grey
 040 poke 2042,13 : rem Sprite 2 data from block 13
 045 poke 2043,14 : rem Sprite 3 data from block 14
 050 for i=0 to 62
