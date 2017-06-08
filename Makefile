@@ -1,14 +1,17 @@
-bouncing-smiley.prg: main.bas border.bas smiley.bas
-	awk 1 main.bas border.bas smiley.bas | petcat -w2 -o bouncing-smiley.prg
+bouncing-smiley.prg: main.bas border.bas smiley.bas frowney.bas
+	awk 1 main.bas border.bas smiley.bas frowney.bas | petcat -w2 -o bouncing-smiley.prg
 
 smiley.bas: smiley.bmp
 	python sprite-converter.py smiley.bmp 1000 > smiley.bas
+
+frowney.bas: frowney.bmp
+	python sprite-converter.py frowney.bmp 2000 > frowney.bas
 
 run: bouncing-smiley.prg
 	x64 -autostart bouncing-smiley.prg
 
 clean:
-	rm -f *.prg smiley.bas
+	rm -f *.prg smiley.bas frowney.bas
 
 NAME := $(shell git show -s --format='%an' HEAD)
 MAIL := $(shell git show -s --format='%ae' HEAD)

@@ -1,6 +1,6 @@
 # Bouncing Smiley
 
-This is a "game", written in C64 Basic, in which you can watch a smiley bounce around the screen. Yay!
+This is a "game", written in C64 Basic, in which you can watch a smiley (and a frowney!) bounce around the screen. Yay!
 
 ## Usage
 
