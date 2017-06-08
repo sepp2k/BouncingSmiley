@@ -17,7 +17,9 @@ NAME := $(shell git show -s --format='%an' HEAD)
 MAIL := $(shell git show -s --format='%ae' HEAD)
 
 release: bouncing-smiley.prg
+	mv bouncing-smiley.prg tmp.prg
 	git checkout builds
+	mv tmp.prg bouncing-smiley.prg
 	git add bouncing-smiley.prg
 	git config user.email "$(MAIL)"
 	git config user.name "$(NAME)"
